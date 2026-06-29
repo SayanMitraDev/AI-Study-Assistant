@@ -1,0 +1,122 @@
+import { z } from "zod/v4";
+export declare const studySessionsTable: import("drizzle-orm/pg-core").PgTableWithColumns<{
+    name: "study_sessions";
+    schema: undefined;
+    columns: {
+        id: import("drizzle-orm/pg-core").PgColumn<{
+            name: "id";
+            tableName: "study_sessions";
+            dataType: "number";
+            columnType: "PgSerial";
+            data: number;
+            driverParam: number;
+            notNull: true;
+            hasDefault: true;
+            isPrimaryKey: true;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        deckId: import("drizzle-orm/pg-core").PgColumn<{
+            name: "deck_id";
+            tableName: "study_sessions";
+            dataType: "number";
+            columnType: "PgInteger";
+            data: number;
+            driverParam: string | number;
+            notNull: true;
+            hasDefault: false;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        cardsReviewed: import("drizzle-orm/pg-core").PgColumn<{
+            name: "cards_reviewed";
+            tableName: "study_sessions";
+            dataType: "number";
+            columnType: "PgInteger";
+            data: number;
+            driverParam: string | number;
+            notNull: true;
+            hasDefault: true;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        correctCount: import("drizzle-orm/pg-core").PgColumn<{
+            name: "correct_count";
+            tableName: "study_sessions";
+            dataType: "number";
+            columnType: "PgInteger";
+            data: number;
+            driverParam: string | number;
+            notNull: true;
+            hasDefault: true;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        durationSeconds: import("drizzle-orm/pg-core").PgColumn<{
+            name: "duration_seconds";
+            tableName: "study_sessions";
+            dataType: "number";
+            columnType: "PgInteger";
+            data: number;
+            driverParam: string | number;
+            notNull: true;
+            hasDefault: true;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        completedAt: import("drizzle-orm/pg-core").PgColumn<{
+            name: "completed_at";
+            tableName: "study_sessions";
+            dataType: "date";
+            columnType: "PgTimestamp";
+            data: Date;
+            driverParam: string;
+            notNull: true;
+            hasDefault: true;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+    };
+    dialect: "pg";
+}>;
+export declare const insertStudySessionSchema: z.ZodObject<{
+    deckId: z.ZodInt;
+    cardsReviewed: z.ZodOptional<z.ZodInt>;
+    correctCount: z.ZodOptional<z.ZodInt>;
+    durationSeconds: z.ZodOptional<z.ZodInt>;
+}, {
+    out: {};
+    in: {};
+}>;
+export type InsertStudySession = z.infer<typeof insertStudySessionSchema>;
+export type StudySession = typeof studySessionsTable.$inferSelect;
+//# sourceMappingURL=studySessions.d.ts.map

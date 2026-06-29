@@ -1,0 +1,1 @@
+{"version":3,"file":"subjectStat.d.ts","sourceRoot":"","sources":["../../../src/generated/types/subjectStat.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,WAAW,WAAW;IAC1B,gBAAgB;IAChB,SAAS,EAAE,MAAM,GAAG,IAAI,CAAC;IACzB,WAAW,EAAE,MAAM,CAAC;IACpB,SAAS,EAAE,MAAM,CAAC;IAClB,SAAS,EAAE,MAAM,CAAC;IAClB,aAAa,EAAE,MAAM,CAAC;CACvB"}
